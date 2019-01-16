@@ -19,6 +19,7 @@ let
         tar -xf "${nix.src}" --strip-components 4 "${nix.name}"/src/libexpr/primops/fetchGit.cc
         tar -xf "${nix.src}" --strip-components 2 "${nix.name}"/src/nlohmann
         patch -p4 < "$patchSrc"
+        sed -i 's/^GitInfo exportGit/static GitInfo exportGit/' fetchGit.cc
       '';
 
       nativeBuildInputs = [ cmake pkgconfig ];

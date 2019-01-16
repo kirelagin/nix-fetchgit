@@ -17,7 +17,7 @@ Use
 let
   wrappedSrc = builtins.fetchTarball {
     url = "https://github.com/kirelagin/nix-fetchgit/archive/1.0.tar.gz";
-    sha256 = "1a249b7lqkijg4xsla1sr9px30hijxzrqhvag1xfrdlv47idms9w";
+    sha256 = "<???>";
   };
   wrapped = import wrappedSrc { inherit pkgs; };
 in wrapped pkgs.nix
